@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% block title_page%}Nova Formação{% endblock %}
+{% block content %}
+<div class="container-fluid">
+  <div class="card" style="width:50%">
+    <div class="card-body">
+        <form method="post">
+            {% csrf_token %}
+            {% for hidden_field in form.hidden_fields %}
+    {{ hidden_field }}
+  {% endfor %}
+            {% for form in form.visible_fields %}
+               <div class="form-group">
+                  {{ form.label_tag }}
+                  {% render_field form class="form-control" %}
+               </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-info">Cadastrar <i class="fas fa-book"></i></button>
+        </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
