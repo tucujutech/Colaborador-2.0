@@ -64,4 +64,4 @@ Se as migrações tiverem sido executadas corretamente, é hora de rodadar a apl
 No mesmo diretório dito anteriormente execute o seguinte comando:
 ''' python manage.py runserver 8080 ''' 
 
-Após , acesse a url : ''' localhost:8080/Colaborador/login '''
+Após , acesse a url : ''' localhost:8080/Colaborador/login/ '''
