@@ -1,1 +1,1 @@
-web: gunicorn ColaboradorApp.wsgi
+web: gunicorn tw_clientes.wsgi
